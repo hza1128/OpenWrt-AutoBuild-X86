@@ -12,7 +12,7 @@ cat feeds.conf.default
 
 # 添加第三方软件包
 git clone https://github.com/db-one/dbone-packages.git -b 18.06 package/dbone-packages
-git clone --depth=1 https://github.com/kenzok8/small-package.git kenzok8-packages
+git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
 # 更新并安装源
 ./scripts/feeds clean
@@ -269,6 +269,7 @@ CONFIG_PACKAGE_luci-theme-atmaterial_new=y #atmaterial 三合一主题
 CONFIG_PACKAGE_luci-theme-neobird=y #Neobird 主题
 # CONFIG_PACKAGE_luci-app-autotimeset=y #定时重启系统，网络
 # CONFIG_PACKAGE_luci-app-ddnsto=y #小宝开发的DDNS.to内网穿透
+CONFIG_PACKAGE_luci-app-ddns-go=y #动态域名
 # CONFIG_PACKAGE_ddnsto=y #DDNS.to内网穿透软件包
 EOF
 
