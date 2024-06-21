@@ -1,6 +1,6 @@
 # OpenWrt-AutoBuild
 
-#### 基于OpenWrt-Actions-Lean+Lienol-自动化在线编译脚本  
+#### 基于OpenWrt-Actions-Lean+Lienol-自动化在线编译脚本，固件输出默认旁路由模式，主路由模的请自行更改网络设置。 
 后台地址：192.168.10.11 ，
 用户名 ：root ，
 密码   ：空
