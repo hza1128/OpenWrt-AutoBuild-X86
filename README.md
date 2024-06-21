@@ -2,6 +2,8 @@
 
 #### 基于OpenWrt-Actions-Lean+Lienol-自动化在线编译脚本  
 后台地址：192.168.10.11
+用户名 ：root
+密码   ：空
  ##### 固件更新下载:
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hza1128/OpenWrt-AutoBuild-X86?style=for-the-badge&label=固件更新下载)](https://github.com/hza1128/OpenWrt-AutoBuild-X86/releases)
 
