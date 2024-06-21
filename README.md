@@ -1,7 +1,7 @@
 # OpenWrt-AutoBuild
 
 #### 基于OpenWrt-Actions-Lean+Lienol-自动化在线编译脚本  
-
+后台地址：192.168.10.11
  ##### 固件更新下载:
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/db-one/OpenWrt-AutoBuild?style=for-the-badge&label=固件更新下载)](https://github.com/db-one/OpenWrt-AutoBuild/releases)
 
