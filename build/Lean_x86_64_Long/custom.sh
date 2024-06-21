@@ -64,10 +64,10 @@ uci set network.lan.delegate='0'                             # 去掉LAN口使�
 uci set dhcp.@dnsmasq[0].filter_aaaa='0'                     # 禁止解析 IPv6 DNS记录(若用IPV6请把'1'改'0')
 
 # 旁路IPV6需要全部禁用
-# uci set network.lan.ip6assign=''                             # IPV6分配长度-禁用
-# uci set dhcp.lan.ra=''                                       # 路由通告服务-禁用
-# uci set dhcp.lan.dhcpv6=''                                   # DHCPv6 服务-禁用
-# uci set dhcp.lan.ra_management=''                            # DHCPv6 模式-禁用
+uci set network.lan.ip6assign=''                             # IPV6分配长度-禁用
+uci set dhcp.lan.ra=''                                       # 路由通告服务-禁用
+uci set dhcp.lan.dhcpv6=''                                   # DHCPv6 服务-禁用
+uci set dhcp.lan.ra_management=''                            # DHCPv6 模式-禁用
 
 # 如果有用IPV6的话,可以使用以下命令创建IPV6客户端(LAN口)（去掉全部代码uci前面#号生效）
 uci set network.ipv6=interface
@@ -267,7 +267,6 @@ CONFIG_PACKAGE_luci-app-poweroff=y #关机（增加关机功能）
 CONFIG_PACKAGE_luci-theme-atmaterial_new=y #atmaterial 三合一主题
 CONFIG_PACKAGE_luci-theme-neobird=y #Neobird 主题
 # CONFIG_PACKAGE_luci-app-autotimeset=y #定时重启系统，网络
-CONFIG_PACKAGE_luci-app-ddns-go=y #ddns-go动态域名
 # CONFIG_PACKAGE_ddnsto=y #DDNS.to内网穿透软件包
 EOF
 
@@ -299,6 +298,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-adbyby-plus=n #adbyby去广告
 CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 CONFIG_PACKAGE_luci-app-ddns=n #DDNS服务
+CONFIG_PACKAGE_luci-app-ddns-go=y #ddns-go动态域名
 CONFIG_DEFAULT_luci-app-vlmcsd=y #KMS激活服务器
 CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
 CONFIG_PACKAGE_luci-app-autoreboot=n #定时重启
