@@ -281,6 +281,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-passwall=y
 # CONFIG_PACKAGE_luci-app-passwall2=n
 # CONFIG_PACKAGE_naiveproxy=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Hysteria=y
 CONFIG_PACKAGE_chinadns-ng=y
 # CONFIG_PACKAGE_brook=y
 CONFIG_PACKAGE_trojan-go=y
