@@ -14,6 +14,10 @@ cat feeds.conf.default
 git clone https://github.com/db-one/dbone-packages.git -b 18.06 package/dbone-packages
 git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
+# 克隆 luci-theme-darkmatter 仓库
+git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter.git
+cp -rf luci-theme-darkmatter/luci/themes/luci-theme-darkmatter package/luci-theme-darkmatter
+
 # 更新并安装源
 ./scripts/feeds clean
 ./scripts/feeds update -a && ./scripts/feeds install -a -f
@@ -266,8 +270,6 @@ CONFIG_PACKAGE_luci-app-openclash=y #OpenClash客户端
 CONFIG_PACKAGE_luci-app-poweroff=y #关机（增加关机功能）
 # CONFIG_PACKAGE_luci-app-argon-config=y #argon主题设置
 CONFIG_PACKAGE_luci-theme-ifit=y #ifit主题
-CONFIG_PACKAGE_luci-theme-Butterfly=y #主题
-CONFIG_PACKAGE_luci-theme-Butterfly-dark=y #主题
 CONFIG_PACKAGE_luci-theme-atmaterial_new=y #atmaterial 三合一主题
 CONFIG_PACKAGE_luci-theme-design=y #主题
 CONFIG_PACKAGE_luci-theme-neobird=y #Neobird 主题
