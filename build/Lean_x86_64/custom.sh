@@ -264,7 +264,7 @@ CONFIG_PACKAGE_luci-app-openclash=y #OpenClash客户端
 # CONFIG_PACKAGE_luci-app-smartdns=y #smartdns服务器
 # CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 CONFIG_PACKAGE_luci-app-poweroff=y #关机（增加关机功能）
-# CONFIG_PACKAGE_luci-app-argon-config=y #argon主题设置
+# CONFIG_PACKAGE_luci-app-argon-config=n #argon主题设置
 CONFIG_PACKAGE_luci-theme-ifit=y #ifit主题
 CONFIG_PACKAGE_luci-theme-atmaterial_new=y #atmaterial 三合一主题
 CONFIG_PACKAGE_luci-theme-design=y #主题
@@ -354,7 +354,7 @@ EOF
 
 # LuCI主题:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-theme-argon=n
 EOF
 
 # 常用软件包:
