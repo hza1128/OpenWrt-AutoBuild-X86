@@ -20,7 +20,7 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packag
 
 # 删除部分默认包
 rm -rf feeds/luci/applications/luci-app-qbittorrent
-rm -rf feeds/luci/themes/luci-theme-argon
+# rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/lean/autocore
 
 # 自定义定制选项
@@ -41,7 +41,7 @@ sed -i 's#192.168.1.1#192.168.10.11#g' $NET                                     
 # sed -i 's#OpenWrt#OpenWrt-X86#g' $NET                                                     # 修改默认名称为OpenWrt-X86
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' $ZZZ                                             # 取消系统默认密码
 sed -i "s/OpenWrt /HZA build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ              # 增加自己个性名称
-sed -i "/uci commit luci/i\uci set luci.main.mediaurlbase=/luci-static/atmaterial_new" $ZZZ        # 设置默认主题(如果编译可会自动修改默认主题的，有可能会失效)
+sed -i "/uci commit luci/i\uci set luci.main.mediaurlbase=/luci-static/argon" $ZZZ        # 设置默认主题(如果编译可会自动修改默认主题的，有可能会失效)
 # sed -i 's#localtime  = os.date()#localtime  = os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")#g' package/lean/autocore/files/*/index.htm               # 修改默认时间格式
 
 # ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●● #
@@ -264,7 +264,7 @@ CONFIG_PACKAGE_luci-app-openclash=y #OpenClash客户端
 # CONFIG_PACKAGE_luci-app-smartdns=y #smartdns服务器
 # CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
 CONFIG_PACKAGE_luci-app-poweroff=y #关机（增加关机功能）
-# CONFIG_PACKAGE_luci-app-argon-config=n #argon主题设置
+CONFIG_PACKAGE_luci-app-argon-config=y #argon主题设置
 CONFIG_PACKAGE_luci-theme-ifit=y #ifit主题
 CONFIG_PACKAGE_luci-theme-atmaterial_new=y #atmaterial 三合一主题
 CONFIG_PACKAGE_luci-theme-design=y #主题
@@ -284,7 +284,7 @@ EOF
 # Passwall插件:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-passwall=y
-CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall2=n
 # CONFIG_PACKAGE_naiveproxy=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria=y
 CONFIG_PACKAGE_chinadns-ng=y
@@ -354,7 +354,7 @@ EOF
 
 # LuCI主题:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-theme-argon=n
+CONFIG_PACKAGE_luci-theme-argon=y
 EOF
 
 # 常用软件包:
