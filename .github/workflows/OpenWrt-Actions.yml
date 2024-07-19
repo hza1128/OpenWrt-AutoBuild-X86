@@ -352,6 +352,7 @@ jobs:
             ★  源码 : ${{ env.REPO_URL }}
             ★  分支 : ${{ env.REPO_BRANCH }}
             ★  感谢源码作者无私分享！
+            ★  IPLC机场推荐 https://j1.bnaffloop.com/#/register?code=GqVAUNgM
 
             🛠 编译版本：${{ env.DISTRIB_REVISION }}
 
